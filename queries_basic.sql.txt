@@ -1,0 +1,11 @@
+-- 1 Retrieve all books in Fiction genre
+SELECT * FROM Books
+WHERE Genre = 'Fiction';
+
+-- 2 Books published after 1950
+SELECT * FROM Books
+WHERE Published_Year > 1950;
+
+-- 3 Customers from Canada
+SELECT * FROM Customers
+WHERE Country = 'Canada';

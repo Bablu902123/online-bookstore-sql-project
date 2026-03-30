@@ -1,0 +1,8 @@
+-- 10) Monthly Revenue Analysis (Business Insight)
+-- Calculates total revenue generated per month
+
+SELECT DATE_TRUNC('month', Order_Date) AS Month,
+       SUM(Total_Amount) AS Revenue
+FROM Orders
+GROUP BY Month
+ORDER BY Month;

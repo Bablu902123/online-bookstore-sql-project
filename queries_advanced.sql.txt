@@ -1,0 +1,13 @@
+-- Total books sold per genre
+SELECT b.Genre, SUM(o.Quantity) AS Total_Books_Sold
+FROM Orders o
+JOIN Books b ON o.Book_ID = b.Book_ID
+GROUP BY b.Genre;
+
+-- Most frequently ordered book
+SELECT o.Book_ID, b.Title, COUNT(o.Order_ID) AS Order_Count
+FROM Orders o
+JOIN Books b ON o.Book_ID = b.Book_ID
+GROUP BY o.Book_ID, b.Title
+ORDER BY Order_Count DESC
+LIMIT 1;
